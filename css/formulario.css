@@ -1,0 +1,314 @@
+.modal-body{
+    padding: 0;
+}
+
+#form-contacto, #form-contacto-1{ 
+    grid-area: b;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+#form-contacto>h1, #form-contacto>p, #form-contacto-1>h1, #form-contacto-1>p{
+    color: #ffffff;
+}
+#form-contacto>h1, #form-contacto-1>h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+    margin-top: 4rem;
+    text-shadow: #00000032 0.01em 0.02em 0.03em;
+    line-height: 2.2rem;
+}
+#form-contacto>p, #form-contacto-1>p{
+    margin:0;
+}
+
+
+#form-all{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* grid template: filas / columnas */
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:    "nom ape"
+                            "nac nac"
+                            "mai mai"
+                            "user user"
+                            "pas pas"
+                            "sen sen"
+                            "p p";
+
+    gap: 0.5rem 1rem;
+    padding: 1.4rem 2rem 0.8rem 2rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+
+#lab-nombre{grid-area: nom;}
+#lab-apellido{grid-area: ape;}
+#lab-nacimiento{grid-area: nac;}
+#lab-mail{grid-area: mai;}
+#lab-usuario{grid-area: user;}
+#lab-pasword{grid-area: pas;}
+.boton1{grid-area: sen;}
+
+#form-all-1{
+    display: grid;
+    grid-template-columns: 1fr;  /* grid template: filas / columnas */
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:    "user1"
+                            "pas1"
+                            "p";
+
+    gap: 0.5rem 1rem;
+    padding: 1.4rem 2rem 0.8rem 2rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+
+#lab-usuario-1{grid-area: user1;}
+#lab-pasword-1{grid-area: pas1;}
+.boton1{grid-area: p;}
+
+
+
+label, input, textarea{
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 4PX;
+    border: unset;
+    font-family: inherit;
+
+}
+input, textarea{
+    padding: 0.7rem;
+    box-sizing: border-box;
+    background-color: #ffffffe4;
+    border: 1PX solid rgb(207, 217, 222);
+}
+option{
+    font-size: 0.9rem;   
+}
+input[type="checkbox"]{
+display: inline-block;
+width: auto;
+}
+input[type="checkbox" i]{
+    height: 1rem;
+    width: 1rem;
+}
+.boton1{
+    background-color: #A3351F;
+    border-radius: 0.5rem;
+    margin-bottom: 0;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+
+.img-contact{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 8rem 2rem 10rem 2rem;
+
+    background-color: #EFC4BD;
+    padding: 5rem;
+    box-sizing: border-box;
+    }
+    
+    .img-cont-1 { 
+        grid-area: 1 / 1 / 2 / 4;
+        text-align: center;}
+    .img-cont-2 { grid-area: 3 / 1 / 4 / 2; }
+    .img-cont-3 { grid-area: 2 / 2 / 5 / 3; }
+    .img-cont-4 { grid-area: 3 / 3 / 4 / 4; }
+
+
+.img-cont-1 h2{
+    margin: 1rem 0;
+}
+
+
+
+
+.location-box {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    background-color: #4D6771;
+    padding: 3rem;
+    box-sizing: border-box;
+    height: 100%;
+    margin: auto;
+    }
+    
+    .location1 { grid-area: 1 / 1 / 2 / 2; }
+    .location2 { grid-area: 2 / 1 / 3 / 2; }
+    .location3 { grid-area: 1 / 2 / 3 / 3; }
+
+.location1, .location2{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #F1F2F2;
+    height: 100%;
+}
+.loc-img{
+    width: 45%;
+}
+.loc-txt{
+    width: 55%;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin: auto;
+
+}
+
+
+/* inicio estilos validacion formulario */
+.form-box input:focus{
+    outline-color: #41bbeb;
+}
+.form-box .error-text{
+    color: #8e0202;
+    visibility: hidden;
+    font-size: 0.74rem;
+}
+.exitoHidden{
+    grid-area: p;
+    padding: 0;
+    margin-top: 0;
+    visibility: hidden;
+    display: none;
+}
+.exitoVisible{
+    visibility: visible;
+    grid-area: p;
+    font-size: 0.8rem;
+    color: #000939;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+    display: block;
+}
+.msjHidden{
+    display: none;
+}
+.msjVisible{
+    display: block;
+    visibility: visible;
+    grid-area: p;
+    font-size: 0.8rem;
+    color: #8e0202;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+.form-box.form-error input{
+ border-bottom: 2px solid #BE0E0D;
+}
+.form-box.form-error .error-text{
+    visibility: visible;
+}
+.form-box.form-success input{
+    border-bottom: 2px solid #06c30c;
+}
+/* fin estilios validacion formulario */
+
+
+/*inicio Medianos (landscape tablets, 601px hasta 991) ----------------------------------------------------------------------*/
+@media screen and (min-width: 601px) and (max-width: 991px){
+    #form-contacto, #form-contacto-1{padding: 2rem;}
+    .img-contact{ padding: 2rem;}
+        
+    .location-box {  padding: 1rem;}        
+    .loc-img{
+        width: 45%;
+    }
+    .loc-txt{
+        width: 55%;
+        padding: 2rem;
+        box-sizing: border-box;
+        margin: auto; 
+    }
+} /*fin Medianos (landscape tablets, 601px hasta 991)*/
+
+/* inicio Extra small devices (phones,  hasta 600px ) ------------------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+    #form-img, #form-img-1{  width: 50%; }
+    #form-contacto, #form-contacto-1{ 
+        padding: 2rem 1rem 0;
+    }
+    #form-contacto>h1, #form-contacto>p,  #form-contacto-1>h1, #form-contacto-1>p{
+        text-align: end;
+    } 
+       .img-contact{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 2rem;
+        }
+        .img-cont-1 {  grid-area: 1 / 1 / 2 / 2;}
+        .img-cont-2 { grid-area: 2 / 1 / 3 / 2; }
+        .img-cont-3 { grid-area: 3 / 1 / 4 / 2; }
+        .img-cont-4 { grid-area: 4 / 1 / 5 / 2; }
+    
+    .location-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 1rem;
+        }
+        .location2 { grid-area: 3 / 1 / 4 / 2; }
+        .location3 { grid-area: 2 / 1 / 3 / 2; }
+    
+    .location-box h3{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .loc-img, .loc-txt{
+        width: 50%;
+    }
+    .location2 .loc-img{
+        order: 2;
+    }
+    .location2 .loc-txt{
+        order: 1;
+    }
+}/* fin Extra small devices (phones,  hasta 600px )
+
+/*  inicio Extra largo (large laptops and desktops, 1280px and up)------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+    #form-img, #form-img-1{    width: 70%;}
+
+    .img-contact{
+        grid-template-rows: 8rem 2rem 15rem 2rem;
+        padding: 3rem;
+        }
+    
+    .location-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        } 
+        .location1 { grid-area: 1 / 1 / 2 / 2; }
+        .location2 { grid-area: 1 / 2 / 2 / 3; }
+        .location3 { grid-area: 1 / 3 / 2 / 4; }
+    
+    .location1, .location2{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .loc-img,  .loc-txt{
+        width: 100%;
+    }
+    .loc-txt{
+        height: auto;
+    }   
+    .loc-txt h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }     
+} /*fin Extra largo (large laptops and desktops, 1280px and up)

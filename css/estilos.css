@@ -1,0 +1,1154 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Francois+One&family=Lexend+Deca:wght@200;300;500;600;800&family=Patrick+Hand&display=swap');
+/* font-family: 'Boogaloo', cursive;  //es como comicsans 
+font-family: 'Francois One', sans-serif;  //es para los titulos del nav
+font-family: 'Lexend Deca', sans-serif; //para titulos pero mas circular
+font-family: 'Patrick Hand', cursive; //es mas comica y ondulada */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*modaaaaaal*/
+
+
+/*------------------------*/
+body {
+  background-color: #e9e6df;
+  color: #451400;
+  scroll-behavior: smooth;
+  min-width: 100%;
+  background-image: url(../images/fondoPaper.jpg);
+  background-repeat: cover;
+}
+section, article{
+  width: 100%;
+}
+
+p {
+  color: #451400;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  margin-top: 1rem;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+h2 {
+  font-family: 'Francois One', sans-serif;
+}
+
+/*Clases generales*/
+.botonPropio {
+  background-color: #451400;
+  border-radius: 2rem;
+  color: transparent;
+  border: none;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  padding: 0.37rem 0.75rem;
+  overflow: hidden;
+  text-shadow:
+    0 0 #fff,
+    0 3em #172B45;
+  transition: .5s;
+}
+
+.botonPropio:hover {
+  background: #72BF7A;
+  text-shadow:
+    0 -3em #fff,
+    0 0 #172B45;
+}
+
+.centradoFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-cover {
+  /* agregaro a la img: para que la imagen  cubra todo el div y no se deforme*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*fin de clases generales*/
+
+/*----------inicia header--------------------*/
+header {
+  box-shadow: 0 2px 3px rgb(0 0 0 / 5%);
+  position: sticky;
+  top: 0rem;
+  z-index: 20;
+}
+
+#form-all-1 a {
+  text-decoration: none;
+}
+
+#NavBtnPrincipal {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  grid-template-rows: 4.5rem;
+  /*igual que la altura */
+  grid-template-areas: "logo botonera acceso";
+  background-color: #FFFFFF;
+  padding: 0.2rem 1rem;
+}
+
+#NavBtnPrincipal .boxLogo {
+  grid-area: logo;
+}
+
+.logoPrincipal {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#NavBtnPrincipal .boxBtn {
+  grid-area: botonera;
+  height: 100%;
+  display: grid;
+  /*place-items: center; /*para centrar x,y con grid*/
+  align-content: center;
+  /*aliena verticalmente en grid contenedor (*defini alto)*/
+  justify-content: end;
+  /* alinea horizonalmente al final en grid conetendor*/
+}
+
+ul.listaBtn {
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+ul.listaBtn li {
+  display: inline-flex;
+  margin: 0 1rem;
+  align-items: center;
+  height: 3rem;
+  /*es importante especificar para que funcione el align de grid padre*/
+}
+
+ul.listaBtn li a {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  /*centra vertical(el contenido del flex contenedor*/
+  justify-content: center;
+  /*centra horizontal flex contenedor*/
+  text-decoration: none;
+  font-family: 'Francois One', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #451400;
+  position: relative;
+  /*este es para que funcione la clase .txtUnderline*/
+}
+/* esto es para el sutitulado*/
+.txtUnderline::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  transform: scaleX(0);
+  height: 0.15rem;
+  bottom: 0;
+  left: 0;
+  background-color: #AD2118;
+  transition: transform 0.3s ease-out;
+  transform-origin: bottom left;
+  /*transform-origin: bottom right;*/
+  /*para que NO REGRESE la lines: ponemos bottom right, y width100%, y  Botton left en el HOver de abajo */
+}
+.txtUnderline:hover::after {
+  transform: scaleX(1);
+}
+ul.listaBtn li a:hover {
+  color: #AD2118;
+}
+#NavBtnPrincipal .listaBtn li:nth-child(2) {
+  transform: rotate(352deg);
+  background-color: #CD1B1E;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+#NavBtnPrincipal .listaBtn li:nth-child(2) a {
+  color: #fff;
+}
+#NavBtnPrincipal .listaBtn li:nth-child(2) a:hover {
+  text-shadow: 0 0 2px #000;
+}
+#NavBtnPrincipal .listaBtn li:nth-child(2):hover {
+  background: #1B669F;
+  color: #fff;
+  transform: rotate(360deg);
+  transform: scale(1.1);
+}
+#NavBtnPrincipal .boxAcceso {
+  grid-area: acceso;
+  display: flex;
+  align-items: center;
+  margin-left: 0.8rem;
+}
+
+#botonAcceso {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+.boxAcceso #boxTxtAcceso {
+  border-left: solid 0.08rem #fff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/*----------fin header--------------------*/
+
+/*------inicia carrusel-------*/
+.contenedorCarruselGeneral {
+  margin: auto;
+  width: 100%;
+  /*este es el ancho del carrusel, no es responsive*/
+  max-width: 95rem;
+}
+.contenedorTituloControles {
+  /*conteneedor titulo y controles*/
+  display: flex;
+  position: absolute;
+  height: 85%;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+.contenedorTituloControles .indicadores button {
+  background: rgba(255, 255, 255, 0.604);
+  height: 0.3rem;
+  width: 1.5rem;
+  cursor: pointer;
+  border: none;
+  margin-right: 3px;
+}
+.contenedorTituloControles .indicadores button:hover,
+.contenedorTituloControles .indicadores button.activo {
+  background: #cd1b1ecb;
+}
+.contenedorCarruselGeneral .contenedorPrincipalCarrusel {
+  /*Contenedor princilap y flechas*/
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.contenedorCarruselGeneral .contenedorPrincipalCarrusel .flechaLeft,
+.contenedorCarruselGeneral .contenedorPrincipalCarrusel .flechaRight {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.0);
+  font-size: 5rem;
+  height: 50%;
+  color: #eeecec40;
+  cursor: pointer;
+  z-index: 10;
+  transition: .2s ease all;
+}
+.contenedorCarruselGeneral .contenedorPrincipalCarrusel .flechaLeft:hover,
+.contenedorCarruselGeneral .contenedorPrincipalCarrusel .flechaRight:hover {
+  background: rgba(0, 0, 0, 0.0);
+  color: #ffffff;
+}
+.contenedorCarruselGeneral .contenedorPrincipalCarrusel .flechaLeft {
+  left: 0;
+}
+.contenedorCarruselGeneral .contenedorPrincipalCarrusel .flechaRight {
+  right: 0;
+}
+.contenedorCarruselGeneral .contenedorCarrusel {
+  /*carrousel*/
+  width: 100%;
+  padding: 0;
+  /* overflow-x: scroll; */
+  /*no debe estar cuando  añadimos e vento en js a flecha*/
+  overflow: hidden;
+  /*esto corta cuando crece la imagen*/
+  scroll-behavior: smooth;
+  /*el scroll es mas suave*/
+}
+.contenedorCarruselGeneral .contenedorCarrusel .carrusel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.contenedorCarruselGeneral .contenedorCarrusel .carrusel .boxImgCarrusel {
+  /*resisar ruta*/
+  min-width: 100%;
+  /*modificar para la cantida de imagenes vistas*/
+  transition: .3s ease all;
+  box-shadow: 0.3rem 0.31rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+.contenedorCarruselGeneral .contenedorCarrusel .carrusel .boxImgCarrusel.hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.contenedorCarruselGeneral .contenedorCarrusel .carrusel .boxImgCarrusel img {
+  width: 100%;
+  vertical-align: top;
+}
+
+
+/*----------inicio sticky--------------------*/
+.titSticky {
+  color: #FFF;
+  position: sticky;
+  top: 4.9rem;
+  /*calcular la posicion debajo del header*/
+  background-color: violet;
+}
+#inicio {
+  padding: 2rem;
+  background-image: url(../images/fondoPaper.jpg);
+  background-repeat: cover;
+}
+
+/*inicia seccion inicio--------------------------*/
+#inicio #mensajeMotivo1 {
+  width: 100%;
+  height: auto;
+  padding: 8rem 0;
+}
+#contenedorMensaje {
+  transform: perspective(1000px) rotateY(12deg) scaleX(1) scaleY(0.8);
+  transform-origin: 50% 50%;
+  justify-content: center;
+  margin-left: 8%;
+
+  display: grid;
+  width: 80%;
+  max-width: 50rem;
+  height: 100%;
+  grid-template-areas: "a a a a a a a a a a a a a a a a1 a1 a1 a1 a1"
+    "b1 b b b b b b b c c c c d d d d d1 d1 d1 d1"
+    "e1 e1 e f f f f f f f g g h h h h h h h h";
+  grid-template-rows: 4rem 7rem 8rem;
+  grid-template-columns: repeat(20, 3rem);
+  place-items: center;
+}
+
+#contenedorMensaje p {
+  margin: 0;
+  text-align: left;
+  font-family: 'Patrick Hand', cursive;
+}
+
+#p1 {
+  grid-area: a;
+}
+
+#p1 p {
+  font-size: 4.6rem;
+  transform: scaleX(1.5);
+}
+
+#p2 {
+  grid-area: b;
+}
+
+#p2 p {
+  font-size: 10rem;
+  font-weight: 900;
+  transform: scaleX(0.8);
+}
+
+#p3 {
+  grid-area: c;
+  padding-top: 2em;
+  transform: scale(0.9);
+}
+
+#p3 p {
+  font-size: 4rem;
+  line-height: 3.5rem;
+  text-align: center;
+}
+
+#p4 {
+  grid-area: d;
+}
+
+#p4 p {
+  font-size: 6.6rem;
+  transform: scale(0.9, 1.4);
+}
+
+#p5 {
+  grid-area: e;
+}
+
+#p5 p,
+#p7 p {
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+#p6 {
+  grid-area: f;
+}
+
+#p6 p {
+  font-size: 10rem;
+  transform: scaleX(0.56);
+  font-weight: 600;
+}
+
+#p7 {
+  grid-area: g;
+}
+
+#p8 {
+  grid-area: h;
+}
+
+#p8 p {
+  font-size: 9.3rem;
+  transform: scaleX(0.95);
+  font-weight: 600;
+}
+
+/* inicia  contenedor nosotros de la secicon inicio  -------------*/
+#contenedorNosotros {
+  margin: 5rem 0;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: " cn1 cn1 cn1 cn2 cn2 cn2"
+    " cn cn cn3 cn3 cn4 cn4";
+  grid-template-rows: 30rem 30rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+#Boxcn1 {
+  grid-area: cn1;
+}
+#Boxcn1 img{
+  object-fit: scale-down;
+  transform: scale(1.1);
+}
+#Boxcn2 {
+  grid-area: cn2;
+  padding: 5rem 8rem 0 0;
+  z-index: 1;
+}
+
+#Boxcn2 h2 {
+  font-size: 3rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  font-family: 'Patrick Hand', cursive;
+  transform: scaleY(1.4);
+  transform-origin: 0 50%;
+  margin-bottom: 1rem;
+}
+
+.txtSoloBorde {
+  color: #EEE7E1;
+  text-shadow: -2px -2px 1px #451400, 2px 2px 1px #451400, -2px 2px 1px #451400, 2px -2px 1px #451400;
+}
+
+.txtChico {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+#Boxcn3 {
+  grid-area: cn3;
+  display: flex;
+  align-items: center;
+}
+
+#Boxcn4 {
+  grid-area: cn4;
+}
+#Boxcn4 img{
+  object-fit: scale-down;
+  transform: scale(1.1);}
+  
+
+/*-----aqui inicia seecionPedido de videoooo*/
+.productosOrganicos {
+  width: 100%;
+}
+
+.boxVideo {
+  height: 34.5rem;
+  /*altura igual a  video txt*/
+  font-size: 1.75rem;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.boxVideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.videoTxt {
+  height: 34.5rem;
+  /*altura igual a  boxvideo*/
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*fin videoo*/
+/*inicio contenedor grid general mensaje  natural*/
+.organigosGridGeneral {
+  display: grid;
+  width: 70%;
+  height: 80%;
+  grid-template-areas: "org1 org1"
+    "org2 org3";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70% 20%;
+  gap: 10%;
+}
+
+
+/*----------------inicio contenedor grid especifico mensaje natural--------------------*/
+.contenedorGridTxt {
+  grid-area: org1;
+  transform: rotateX(-20deg) rotateY(-17deg) rotateZ(-6deg);
+  perspective: 18.31rem;
+  perspective-origin: 36% 88%;
+
+  display: grid;
+  width: 70%;
+  height: 100%;
+  grid-template-areas: "r1"
+    "r2"
+    "r3"
+    "r4";
+  grid-template-rows: 15% 27% 40% 18%;
+  grid-template-columns: auto;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.contenedorGridTxt p {
+  font-family: 'Patrick Hand', cursive;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.419);
+
+}
+
+.r1 {
+  grid-area: r1;
+}
+
+.r1 p {
+  font-size: 2.8rem;
+  transform: scaleX(1.1);
+}
+
+.r2 {
+  grid-area: r2;
+}
+
+.r2 p {
+  font-size: 3.2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  transform: scale(1.3, 1.4);
+}
+
+.r3 {
+  grid-area: r3;
+}
+
+.r3 p {
+  font-size: 8.5rem;
+  font-weight: 900;
+}
+
+.r4 {
+  grid-area: r4;
+}
+
+.r4 p {
+  font-size: 3rem;
+  font-weight: 400;
+  transform: scale(1.4, 1.2)
+}
+
+.noBox {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5%;
+  align-items: center;
+}
+
+.noBox .noChico {
+  width: 20%;
+}
+
+.noBox .noGrande {
+  width: 75%;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  color: #fff;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.419);
+}
+
+#no1 {
+  grid-area: org2;
+}
+
+#no2 {
+  grid-area: org3;
+}
+
+
+/*texto para ingredientes y platos de comida*/
+#pedido,
+#ubicacion {
+  background-image: url(../images/fondoPaper.jpg);
+  background-repeat: cover;
+}
+
+#infoMenu {
+  width: 47.5rem;
+  margin: auto;
+  text-align: center;
+}
+
+#contenedeorIngredientesTxt {
+  height: 22.5rem;
+  width: 43.75rem;
+  margin: 8rem auto;
+}
+
+#ingredientesTxt {
+  transform: scaleZ(2.6) rotateX(-3deg) rotateY(2deg) rotateZ(-6deg) skewX(-2deg) skewY(9deg);
+  perspective: 63.3rem;
+  perspective-origin: 58% 36%;
+
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "ing1 ing1"
+    "ing2 ing3"
+    "ing2 ing4";
+  grid-template-rows: 18% 64% 18%;
+  grid-template-columns: 25% 75%;
+  place-items: center;
+}
+
+#ing1,
+#ing2,
+#ing3,
+#ing4 {
+  font-family: 'Patrick Hand', cursive;
+}
+#ing1 {
+  padding-top: 1em;
+  grid-area: ing1;
+  font-size: 4rem;
+  font-weight: 800;
+  transform: scaleX(0.5);
+}
+#ing2 {
+  grid-area: ing2;
+  font-size: 30rem;
+  font-weight: 900;
+  transform: scaleX(0.4);
+}
+#ing3 {
+  grid-area: ing3;
+  font-size: 8rem;
+  font-weight: 600;
+  transform: scale(0.7, 1.8);
+}
+#ing4 {
+  padding-left: 0.5em;
+  grid-area: ing4;
+  font-size: 2.8rem;
+  font-weight: 800;
+  transform: scaley(1.2);
+}
+
+/*-------aqui inicia el carrusel de  platooos-----*/
+.contenedorComida {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 1.5em 0;
+  margin: 0;
+}
+.contenedorComida .boxComida {
+  min-width: 12.5rem;
+  max-width: 12.5rem;
+  height: 12.5rem;
+}
+
+.boxComida img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.boxComida:hover {
+  transform: scale(1.2);
+}
+
+/*----------aqui inicia texto de la nueva comida video--------------*/
+
+.newFoodTxt {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto1,
+.texto2,
+.texto3 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.419);
+}
+
+.texto1 {
+  font-size: 8rem;
+  line-height: 6rem;
+  padding: 1rem 0;
+
+}
+
+.texto3 {
+  font-size:1.375rem;
+  font-weight: 500;
+  padding: 0 8rem;
+}
+
+.buttonSquad {
+  border: transparent;
+  background-color: unset;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+}
+
+.boxButon {
+  border: 0;
+  background-color: rgb(173, 33, 24);
+  width: 18.75rem;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-----------inicia reseñaaaaas/ recompensas ---------*/
+#titcomentarios {
+  height: 17.5rem;
+  margin: 5rem 0 3.5rem 0;
+}
+
+#titcomentarios p {
+  color: #451400;
+}
+
+.txtBeneficios {
+  width: 50%;
+  font-size: 1.2rem;
+  line-height: 2.375rem;
+  max-width: 31.25rem;
+  margin: auto;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+
+/*---------fin de seccion---------*/
+#finsec {
+  background-image: url(../images/fondoPaperBot.png);
+  background-repeat: repeat-x;
+  height: 12.5rem;
+}
+
+/*------------inicia los comentarios------------*/
+#opiniones-de-clientes {
+  background-color: #fff;
+  background-repeat: repeat-x;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tit-opinion {
+  width: 25rem;
+  text-align: center;
+  margin: auto;
+}
+
+#opinio1 {
+  width: 37.5rem;
+  margin: auto;
+}
+
+#carouselExampleDark {
+  height: 9rem;
+}
+
+.carousel-inner {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.carousel-item {
+  height: 100%;
+  align-items: center;
+}
+
+.carousel-caption {
+  height: 80%;
+  margin-bottom: 0.5em;
+}
+
+.text-center {
+  height: 90%;
+}
+
+.blockquote {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.icon {
+  max-width: 5%;
+  height: 0.938rem;
+  width: 0.938rem;
+  object-fit: cover;
+}
+
+.lead {
+  width: auto;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+/*------------terminaaa los comentarios------------*/
+#final {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 1rem 0;
+}
+
+#final h2 {
+  font-weight: 900;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#final button {
+  width: 15rem;
+  height: 3rem;
+  margin: 2rem;
+  background-color: #CD1B1E;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  border: unset;
+}
+
+
+/* inicia footer------------------------------------ */
+footer {
+  height: auto;
+  width: 100%;
+  background-color: #1b0800;
+}
+
+footer p,
+footer h5,
+footer h6 {
+  color: #fff;
+}
+
+footer p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+
+footer h5 {
+  font-weight: 600;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+#containerTxtFooter {
+  width: 70%;
+  height: 85%;
+  background-color: #1b0800;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+#derechosReservados {
+  width: 100%;
+  height: 15%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+footer h6 {
+  font-size: 0.65rem;
+  padding-top: 1.2em;
+  color: #e9e6df86;
+}
+
+#boxFot1 {
+  width: 30%;
+}
+
+.logo2 img {
+  height: 5rem;
+}
+
+#boxFot2 {
+  width: 15%;
+}
+
+#boxFot3 {
+  width: 28%;
+}
+
+#boxFot4 {
+  width: 15%;
+}
+
+#boxFot4 p {
+  padding-left: 0.625rem;
+}
+
+.boxitofooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.boxitofooter span {
+  width: 20%;
+  min-width: 1.875rem;
+  max-width: 1.875rem;
+  color: #fff;
+}
+
+.boxitofooter p {
+  width: 80%;
+}
+
+/* fin footer */
+
+/*inicio Medianos (landscape tablets, 601px hasta 991) ---------------------------------------------------------*/
+@media screen and (min-width: 601px) and (max-width: 991px){
+  #NavBtnPrincipal{
+    padding-left: 3px;
+    padding-right: 5px;    
+    grid-template-columns: 4.5rem 4fr 1fr;
+  }
+  ul.listaBtn li{
+    margin: 0 0.3rem;
+  }
+  #botonAcceso{
+    gap: 0;
+    text-align: center;
+  }
+  #boxIcoGif{
+    display: none;
+  }
+  #contenedorMensaje {
+    transform: perspective(1000px) rotateY(12deg) scaleX(0.8) scaleY(0.8);
+  }
+  #inicio #mensajeMotivo1{
+    padding: 0;
+    width: 33.75rem;
+  }
+  #Boxcn2{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  #Boxcn2 p, #Boxcn3 p{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  #contenedorNosotros{
+    grid-template-rows: 25rem 20rem;
+  }
+  #contenedeorIngredientesTxt {
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  #ingredientesTxt {
+    transform: scale(0.7);
+    max-width: 43.75rem;
+  }
+
+  #ing1{
+    font-size: 3.5rem;
+  }
+  #ing3{
+    transform: scale(0.6, 1.8);
+  }
+.contenedorGridTxt{
+  transform: scale(0.6);
+  width: 100%;
+  transform-origin: 50% 50%;
+}
+#infoMenu{
+  width: 80%
+}
+.texto3 {
+  font-size: 1rem;
+  padding: 0 4rem;
+}
+#titcomentarios {
+  margin: 0rem 0 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+#containerTxtFooter {
+  width: 90%;
+}
+#titcomentarios .contenedorGridTxt{
+  width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+/* inicio Extra small devices (phones,  hasta 600px ) ----------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  ul.listaBtn li{
+    display: none;
+  }
+  #inicio{
+    padding: 0;
+  }
+  #inicio #mensajeMotivo1{
+    padding: 1.5rem 0 0 0;
+    width: 90%;
+  }
+  #contenedorMensaje {
+    transform: perspective(1000px) rotateY(12deg) scaleX(0.35) scaleY(0.5);
+  }
+  #contenedorNosotros {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  #Boxcn2 {
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .organigosGridGeneral {
+    width: 90%;
+    height: 90%;
+  }
+  .contenedorGridTxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .contenedorGridTxt  div p{
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+  #contenedeorIngredientesTxt {
+    transform: scale(0.5);
+    margin: 0rem auto;
+  }
+  #pedido{
+    display: grid;
+    justify-content: center;
+  }
+  #infoMenu{
+    width: 20rem
+  }
+  .texto3 {
+    padding: 0;
+  }
+ #titcomentarios .contenedorGridTxt .r1 p {
+  font-size: 1.8rem;
+}
+#titcomentarios .contenedorGridTxt p {
+  margin: 0.5rem;
+  text-align: center;
+}
+#titcomentarios .contenedorGridTxt{
+  transform: scaleY(1.3);
+}
+
+#carouselExampleDark {
+  height: 12rem;
+}
+.carousel-inner {
+  width: 100%;
+}
+.carousel-dark .carousel-caption {
+  height: 100%;
+}
+#containerTxtFooter {
+  width: 90%;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+}
+#boxFot1, #boxFot2, #boxFot3, #boxFot4{
+  width: 40%;
+}
+}
+

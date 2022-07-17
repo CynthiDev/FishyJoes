@@ -1,0 +1,34 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/VIPBACK.jpg);
+    background-size: cover;
+    
+}
+#containerVip{
+    display: flex;
+    height: auto;
+    width: 60vw;
+    margin: 6rem 0 0 28rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+h1{
+    font-family: 'Francois One', sans-serif;  
+    font-size: 8rem;
+}
+#contenedorLB{
+    padding: 3rem;
+}
+#Abtn{
+    height: 3rem;
+    width: 15rem;
+    background-color: #431548;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}

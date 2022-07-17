@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fishy Joe's</title>
+	<!-- hoja de estilos boopstrap lo que descubri es que importa el orden, poner primero esta -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!--estilos propios  -->
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/formulario.css">
+	<!-- icono de pestaña  -->
+	<link rel="icon" href="img/icono.ico">
+
+	<!-- inicio fuentes iconos google -->
+	<link rel="stylesheet"
+		href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+	<!--  fin fuentes iconos google -->
+	<meta name="description" content="comida">
+	<meta name="keywords" content="restaurant, fastfood, gastronomia">
+	<!-- inicio iconos fontawesome -->
+	<script src="https://kit.fontawesome.com/a058bff008.js" crossorigin="anonymous"></script>
+	<!-- fin iconos fontawesome -->
+</head>
+
+<body>
+	<header>
+		<nav id="NavBtnPrincipal">
+			<div id="boxLogo" class="boxLogo">
+				<a href="index.html"><img class="logoPrincipal" src="images/logofj.png" alt="logo Fishy Joe's" /></a>
+			</div>
+			<div class="boxBtn">
+				<ul class="listaBtn">
+					<li><a class="txtUnderline" href="#">inicio</a></li>
+					<li><a href="#no1">haz tu pedido</a></li>
+					<li><a class="txtUnderline" href="#re">Reseñas</a></li>
+					<li><a class="txtUnderline" href="#final">contacto</a></li>
+				</ul>
+			</div>
+			<div class="boxAcceso">
+				<div class="botonPropio" data-bs-toggle="modal" data-bs-target="#modal-login">
+					<div id="botonAcceso">
+						<div id="boxIcoGif">
+							<span class="fa fa-gift" aria-hidden="true"></span>
+						</div>
+						<div>Accede a Beneficios</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section id="bannerInicio">
+		<!--inicia carruseeeel-->
+		<div class="contenedorCarruselGeneral">
+			<div class="contenedorPrincipalCarrusel">
+				<button id="flechaL" class="flechaLeft"><span class="fa fa-angle-left"></span></button>
+				<div class="contenedorCarrusel">
+					<div class="carrusel">
+						<div class="boxImgCarrusel">
+							<a href="#"><img src="images/1.png" alt="imagen de Baner 1"></a>
+						</div>
+						<div class="boxImgCarrusel">
+							<a href="#"><img src="images/2.png" alt="imagen de Baner 2"></a>
+						</div>
+						<div class="boxImgCarrusel">
+							<a href="#"><img src="images/3.png" alt="imagen de Baner 3"></a>
+						</div>
+						<div class="boxImgCarrusel">
+							<a href="#"><img src="images/4.png" alt="imagen de Baner 4"></a>
+						</div>
+					</div>
+				</div>
+				<button id="flechaR" class="flechaRight"><span class="fa fa-angle-right"></span></button>
+
+				<div class="contenedorTituloControles">
+					<div class="indicadores">
+						<!--se agregaran botons con JS-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="inicio">
+		<div id="mensajeMotivo1" class="centradoFlex">
+			<div id="contenedorMensaje">
+				<div id="p1">
+					<p>CREEMOS QUE LA </p>
+				</div>
+				<div id="p2">
+					<p>COMIDA </p>
+				</div>
+				<div id="p3">
+					<p>TIENE <br>EL</p>
+				</div>
+				<div id="p4">
+					<p>PoDER</p>
+				</div>
+				<div id="p5">
+					<p>DE </p>
+				</div>
+				<div id="p6">
+					<p>CAMBIAR </p>
+				</div>
+				<div id="p7">
+					<p>EL</p>
+				</div>
+				<div id="p8">
+					<p>MUNDO</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="contenedorNosotros">
+			<div id="Boxcn1">
+				<img class="img-cover" src="images/burger1.png" alt="Hamburguesa">
+			</div>
+			<div id="Boxcn2">
+				<h2>NOSOTROS LO <span class="txtChico">HACEMOS</span><span class="txtSoloBorde"> REAL</span></h2>
+				<p>Comida 100% natural sin preservantes ni conservantes. <strong>Real es mejor. Mejor para vos, mejor
+						para las personas, mejor para nuestro planeta</strong>. Puede que sea la forma más difícil de
+					hacer las cosas, pero es la forma correcta.</p>
+			</div>
+			<div id="Boxcn3">
+				<p>¿Probaste nuestro menú Vegano? Te demostramos que la comida <strong>«Cruelty Free»</strong> Puede
+					tener la misma calidad que cualquier otra.</p>
+			</div>
+			<div id="Boxcn4">
+				<img class="img-cover" src="images/wrap.png" alt="pizza">
+			</div>
+		</div>
+	</section>
+
+	<section id="organic" class="productosOrganicos">
+		<div class="videoContainer">
+			<div class="videoTxt">
+				<div class="organigosGridGeneral">
+					<div class="contenedorGridTxt">
+						<div class="r1">
+							<p>SER REAL SIGNIFICA...</p>
+						</div>
+						<div class="r2">
+							<p>PREPARAR ALIMENTOS</p>
+						</div>
+						<div class="r3">
+							<p>FRESCOS</p>
+						</div>
+						<div class="r4">
+							<p>TODOS LOS DÍAS.</p>
+						</div>
+					</div>
+
+					<div class="noBox" id="no1">
+						<img class="noChico" src="images/no1.svg" alt="img negacion">
+						<H2 class="noGrande">Sabores artificiales, colorantes o conservantes.</H2>
+					</div>
+					<div class="noBox" id="no2">
+						<img class="noChico" src="images/no2.svg" alt="img negacion">
+						<h2 class="noGrande">Congelados, enlatados o envasados en plástico.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="boxVideo">
+				<!--este queda pegado al container-->
+				<video src="src/cosecha_m.mp4" autoplay loop></video>
+			</div>
+		</div>
+	</section>
+
+	<section id="pedido">
+		<div id="contenedeorIngredientesTxt">
+			<div id="ingredientesTxt">
+				<P id="ing1">NOSOTROS SOLO USAMOS...</P>
+				<P id="ing2">30</P>
+				<p id="ing3">INGREDIENTES</p>
+				<p id="ing4">ES TODO LO QUE NECESITAMOS.</p>
+			</div>
+		</div>
+		<p id="infoMenu">¿Ya sabés qué vas a pedir? <br>Este es el menú que hemos preparado para vos.</p>
+
+		<div>
+			<div class="contenedorComida">
+				<div class="boxComida"><img src="images/food1.png" alt="plato 1"></div>
+				<div class="boxComida"><img src="images/food2.png" alt="plato 2"></div>
+				<div class="boxComida"><img src="images/food3.png" alt="plato 3"></div>
+				<div class="boxComida"><img src="images/food4.png" alt="plato 4"></div>
+				<div class="boxComida"><img src="images/food5.png" alt="plato 5"></div>
+				<div class="boxComida"><img src="images/food6.png" alt="plato 6"></div>
+				<div class="boxComida"><img src="images/food7.png" alt="plato 7"></div>
+				<div class="boxComida"><img src="images/food8.png" alt="plato 8"></div>
+				<div class="boxComida"><img src="images/food9.png" alt="plato 9"></div>
+				<div class="boxComida"><img src="images/food10.png" alt="plato 10"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="pedilo" class="productosOrganicos">
+		<div class="videoContainer">
+			<div class="videoTxt">
+				<div class="newFoodTxt">
+					<P class="texto2">NUEVOS SABORES</P>
+					<P class="texto1">WRAP JOE'S</P>
+					<P class="texto3">Tortilla rellena de Pollo al grill, marinado con ajo perejil y limón fresco</P>
+					<div class="boxButon"><button class="buttonSquad">PEDILO YA </button></div>
+
+				</div>
+			</div>
+			<div class="boxVideo">
+				<!--este queda pegado al container-->
+				<video src="src/cocinando_m.mp4" autoplay loop></video>
+			</div>
+		</div>
+	</section>
+
+	<section id="ubicacion">
+		<div id="titcomentarios">
+			<div class="contenedorGridTxt">
+				<div class="r1">
+					<p>¿SOS CLIENTE FRECUENTE?</p>
+				</div>
+				<div class="r2">
+					<p>TENEMOS</p>
+				</div>
+				<div class="r3">
+					<p>RECOMPENSAS</p>
+				</div>
+				<div class="r4">
+					<p>EXCLUSIVAS PARA VOS.</p>
+				</div>
+			</div>
+		</div>
+		<p id="re" class="txtBeneficios">Registrate en Fishy Joe's y con cada pedido acumulá puntos para mejores
+			beneficios</p>
+
+	</section>
+	<article id="finsec"></article>
+
+
+	<section id="opiniones-de-clientes">
+		<h2 class="tit-opinion">¿Qué opinan nuestros Clientes?</h2>
+		<article id="opinion1">
+			<!-- inicio carrusel opiniones bootstrap -->
+			<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+						aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+						aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+						aria-label="Slide 3"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+						aria-label="Slide 4"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+						aria-label="Slide 5"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+						aria-label="Slide 1"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-bs-interval="10000">
+						<!-- <img src="imagenes/sin-fondo-opinion.png" class="d-none d-sm-none d-lg-block w-100 " alt="sin-fondo"> -->
+						<div class="carousel-caption d-block">
+							<figure class="text-center">
+								<blockquote class="blockquote">
+									<img src="images/1quote.png" class="float-start icon horizontal-left img-fluid"
+										alt="">
+									<p class="lead">Muy recomendable, la comida es exactamente lo que habíamos
+										pedido y además de excelente calidad, volveré a pedir sin dudas! </p>
+									<img src="images/2quote.png" class="float-end icon text-end img-fluid." alt="">
+								</blockquote>
+								<figcaption class="blockquote-footer ">
+									FAMILIAFAAS - <cite title="Source Title"> 18/04/22</cite>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="carousel-item" data-bs-interval="9000">
+						<div class="carousel-caption d-block">
+							<figure class="text-center">
+								<blockquote class="blockquote">
+									<img src="images/1quote.png" class="float-start icon horizontal-left img-fluid"
+										alt="">
+									<p class="lead">Buenísima atención, super responsables en los plazos de
+										entrega y resolvio si tenía alguna duda, volvería a comprar. </p>
+									<img src="images/2quote.png" class="float-end icon text-end img-fluid." alt="">
+								</blockquote>
+								<figcaption class="blockquote-footer ">
+									SAAR7759859 - <cite title="Source Title"> 16/05/22</cite>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="carousel-item" data-bs-interval="6000">
+						<div class="carousel-caption d-block">
+							<figure class="text-center">
+								<blockquote class="blockquote">
+									<img src="images/1quote.png" class="float-start icon horizontal-left img-fluid"
+										alt="">
+									<p class="lead">Muy amable y respondio todas mis dudas! ls comida es Deliciosa
+									</p>
+									<img src="images/2quote.png" class="float-end icon text-end img-fluid." alt="">
+								</blockquote>
+								<figcaption class="blockquote-footer ">
+									SAAR7759859 - <cite title="Source Title"> 16/06/22</cite>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="carousel-item" data-bs-interval="7000">
+						<div class="carousel-caption d-block">
+							<figure class="text-center">
+								<blockquote class="blockquote">
+									<img src="images/1quote.png" class="float-start icon horizontal-left img-fluid"
+										alt="">
+									<p class="lead">Super buena onda y te aclaran todo sin problema, los preparan
+										a pedido y los hacen bastante rápido.</p>
+									<img src="images/2quote.png" class="float-end icon text-end img-fluid." alt="">
+								</blockquote>
+								<figcaption class="blockquote-footer ">
+									JOANGONZALEZ511 - <cite title="Source Title"> 19/04/22</cite>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="carousel-item" data-bs-interval="5000">
+						<div class="carousel-caption d-block">
+							<figure class="text-center">
+								<blockquote class="blockquote">
+									<img src="images/1quote.png" class="float-start icon horizontal-left img-fluid"
+										alt="">
+									<p class="lead">comimos muy bienl!!! es super saludable!!! muchas gracias
+									</p>
+									<img src="images/2quote.png" class="float-end icon text-end img-fluid." alt="">
+								</blockquote>
+								<figcaption class="blockquote-footer ">
+									RBORDON - <cite title="Source Title"> 19/06/22</cite>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+			<!-- fin carrusel opiniones bootstrap -->
+		</article>
+	</section>
+
+
+	<section id="final">
+		<div>
+			<H2>SABOR REAL CON<br>INGREDIENTES<br>NATURALES</H2>
+			<button type="button" class="buttonSquad" data-bs-toggle="modal" data-bs-target="#modal-registro"
+				role="button">REGISTRATE AQUÍ</button>
+		</div>
+	</section>
+
+	<!-- Modal bootsrap seccion adicional -->
+	<section>
+		<!-- Button trigger modal, se tiene que en lazar con el modal por la ID puede ser con cualquier enlace ( crear un boton)-->
+		<!-- Modal bootsrap -->
+		<div class="modal fade" id="modal-registro" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title">Crea tu cuenta</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!--AQUI INICIA EL CONTENIDO MODAL REGISTROOOOO-->
+						<div id="form-contacto">
+							<div class="box-form">
+								<form id="form-all" action="https://postman-echo.com/post" method="post">
+									<label id="lab-nombre" class="form-box" for="nombre">Nombre*
+										<input type="text" id="nombre" name="nombre" maxlength="30"
+											placeholder="Ingrese su Nombre">
+										<small class="error-text">Debe ingresar su nombre</small>
+									</label>
+									<label id="lab-apellido" class="form-box" for="apellido">Apellido*
+										<input type="text" id="apellido" name="apellido" maxlength="35"
+											placeholder="Ingrese su Apellido">
+										<small class="error-text">Debe ingresar su Apellido</small>
+									</label>
+									<label id="lab-mail" class="form-box" for="mail">Correo electrónico*
+										<input type="email" id="mail" name="mail" maxlength="50"
+											placeholder="Ingrese su e-mail">
+										<small class="error-text">Debe ingresar un mail válido ejemplo@mail.com</small>
+									</label>
+									<label id="lab-nacimiento" class="form-box" for="nacimiento">Fecha de Nacimiento*
+										(día/mes/año)
+										<input type="date" id="nacimiento" name="nacimiento" required>
+										<small class="error-text">Debe ingresar una fecha</small>
+									</label>
+									<label id="lab-usuario" class="form-box" for="usuario"> Nombre de Usuario*
+										<input type="text" id="usuario" name="usuario" maxlength="20" minlength="4"
+											placeholder="Ingrese un Nombre de Usuario">
+										<small class="error-text">Admite Letras, numeros, guion y guion_bajo</small>
+									</label>
+									<label id="lab-pasword" class="form-box" for="pasword">Contraseña*
+										<input type="password" id="pasword" name="pasword" maxlength="12" minlength="4"
+											placeholder="Ingrese una contraseña">
+										<small class="error-text">Debe ingresar un pasword entre 4 a 12 caracteres</small>
+									</label>
+									<input id="boton-f" class="boton1" type="submit" value="REGISTRARSE">
+
+								</form>
+								<p id="exito" class="exitoHidden">¡Suscripción enviada con éxito!</p>
+								<p id="mensajeHidden" class="msjHidden">Debe completar todos los campos</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- finModal bootsrap -->
+
+		<!-- Modal bootsrap 2 -->
+		<div class="modal fade" id="modal-login" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title">Ingresa a tu cuenta</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!--AQUI INICIA EL CONTENIDO MODAL LOGIIIIIIN-->
+						<div id="form-contacto-1">
+							<div class="box-form">
+								<form id="form-all-1" action="beneficios.html" method="get">
+									<label id="lab-usuario-1" class="form-box" for="usuario-1"> Nombre de Usuario*
+										<input type="text" id="usuario-1" name="usuario"
+											placeholder="Ingrese un Nombre de Usuario">
+										<small class="error-text">nombre de ususario incorrecto</small>
+									</label>
+									<label id="lab-pasword-1" class="form-box" for="pasword-1">Contraseña*
+										<input type="password" id="pasword-1" name="pasword"
+											placeholder="Ingrese una contraseña">
+										<small class="error-text">contraseña incorrectas</small>
+									</label>
+									<a href="beneficios.html"><input id="boton-f-1" class="boton1" type="submit"
+											value="INGRESAR"></a>
+									<!--agregar type submit-->
+									<p id="exito-1" class="exitoHidden"> datos correctos</p>
+									<p id="mensajeHidden-1" class="msjHidden">usuario o contraseña incorrecto</p>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- finModal bootsrap 2 -->
+	</section>
+
+	<footer>
+		<div id="containerTxtFooter">
+			<div id="boxFot1">
+				<div class="logo2">
+					<img src="images/fishilog.png" alt="logo hojade otoño">
+				</div>
+				<p>Nuestros horarios: <br>
+					Lunes a domingo:
+					7 PM - 23 PM.</p>
+			</div>
+			<div id="boxFot2">
+				<h5>Intereses</h5>
+				<p>Salud</p>
+				<p>Calidad</p>
+				<p>Comida Natual</p>
+				<p>Cruelty Free</p>
+			</div>
+			<div id="boxFot3">
+				<h5>Contactanos</h5>
+				<a class="boxitofooter">
+					<span class="material-symbols-outlined">location_city</span>
+					<p>Street 777 Mar del Plata, Buenos Aires - Argentina</p>
+				</a>
+				<a class="boxitofooter">
+					<span class="material-symbols-outlined">phone_iphone</span>
+					<p>Mobile: -54 (9) 223-5585-555 <br> Phone: 01235 56789</p>
+				</a>
+				<a class="boxitofooter">
+					<span class="material-symbols-outlined">mail</span>
+					<p>Info-Bio@mail.com</p>
+				</a>
+			</div>
+			<div id="boxFot4">
+				<h5>Redes Sociales</h5>
+				<a class="boxitofooter" href="http://www.facebook.com" target="_blank">
+					<span class="fa fa-facebook"></span>
+					<p>Facebook</p>
+				</a>
+				<a class="boxitofooter" href="http://www.instragram.com" target="_blank">
+					<span class="fa fa-instagram"></span>
+					<p>Instragram</p>
+				</a>
+				<a class="boxitofooter" href="http://www.twitter.com" target="_blank">
+					<span class="fa fa-twitter"></span>
+					<p>Twitter</p>
+				</a>
+				<a class="boxitofooter" href="http://www.pinterest.com" target="_blank">
+					<span class="fa fa-pinterest"></span>
+					<p>Pinterest</p>
+				</a>
+			</div>
+		</div>
+		<div id="derechosReservados">
+			<h6>Todos los derechos reservados © 2022 <b>CynthiDev</b></h6>
+		</div>
+	</footer>
+
+	<!--este es el js query-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!--este es el js deligthbox-->
+	<script src="js/lightbox.js"></script>
+	<!--este es el js de bootstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+	<!--js propio-->
+	<script src="js/valifacionformulario.js"></script>
+	<script src="js/carruselComida.js"></script>
+	<script src="js/javascrip-carrusel.js"></script>
+</body>
+</html>
